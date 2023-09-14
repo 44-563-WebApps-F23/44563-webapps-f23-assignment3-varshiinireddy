@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<p>
+    Hello, I'm Varshini Chittepu, and here's a bit about me! I have always been passionate about technology, and one of my favorite pastimes is debugging code to solve complex problems. It's like solving a puzzle, and the thrill of finding that elusive bug and making everything work seamlessly is incredibly satisfying.
+
+Beyond the world of coding, I'm an avid photographer. I find joy in capturing the beauty of everyday moments, whether it's a stunning sunset, the hustle and bustle of a city street, or the delicate details of nature. Photography allows me to see the world through a different lens, quite literally.
+
+I also have a deep wanderlust, and traveling is high on my list of priorities. Exploring new places, immersing myself in different cultures, and trying new cuisines is something I eagerly look forward to. Traveling not only broadens my horizons but also fuels my creativity and curiosity.
+</p>
+<h2>Favorite Food</h2>
+<p>Penne Pasta is a  dish known for its creamy, spicy exterior, flavorful filling veggies, and satisfying combination of textures and tastes, making it a culinary delight.</p>
+<image src="pasta.jpg" alt="pasta"></image>
+<hr>
+<h2>Recommended Sports to Try</h2>
+    <p>Exploring different sports can be a great way to stay active and have fun. Here are four sports that I recommend trying, each with its own unique appeal:</p>
+
+    <table border="1">
+        <tr>
+            <th>Sport</th>
+            <th>Reason to Try</th>
+            <th>Hours per Week</th>
+        </tr>
+        <tr>
+            <td>Badminton</td>
+            <td>Badminton is a full-body workout that's easy on the joints, making it suitable for all ages. It's not only a great way to stay in shape but also a life-saving skill.</td>
+            <td>1-2 hours</td>
+        </tr>
+        <tr>
+            <td>cricket</td>
+            <td>cricket is a fantastic sport for improving agility, hand-eye coordination, and cardiovascular fitness. Plus, it's a social sport that you can enjoy with friends.</td>
+            <td>2-4 hours</td>
+        </tr>
+        <tr>
+            <td>Trekking</td>
+            <td>Trekking allows you to connect with nature, explore beautiful landscapes, and get some fresh air. It's a low-cost outdoor activity suitable for all fitness levels.</td>
+            <td>2-3 hours</td>
+        </tr>
+    </table>
+<hr>
+<h2>Block quote a relevant question </h2>   
+<blockquote>
+<p>Q:How can I add a custom classname to body on category page and all subcategories and posts of this page?</p>
+<p><a href="https://stackoverflow.com/questions/40342798/how-can-i-add-a-custom-classname-to-body-on-category-page-and-all-subcategories">Source:</a></p>
+</blockquote> 
+<pre>
+    add_filter('body_class','add_category_to_single');
+    function add_category_to_single($classes) {
+      if (is_single() ) {
+        global $post;
+        foreach((get_the_category($post->ID)) as $category) {
+          // add category slug to the $classes array
+          $classes[] = $category->category_nicename;
+        }
+      }
+      // return the $classes array
+      return $classes;
+    }
+
+</pre>
+
+
